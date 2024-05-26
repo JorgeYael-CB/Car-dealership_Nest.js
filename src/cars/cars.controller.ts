@@ -17,8 +17,6 @@ export class CarsController {
 
     @Get('/:id')
     getCardById( @Param('id') id:string ){
-        console.log( {id} );
-
-        return this.carsService.findOneById(Number(id));
+        return this.carsService.findOneById( +id );
     };
 };

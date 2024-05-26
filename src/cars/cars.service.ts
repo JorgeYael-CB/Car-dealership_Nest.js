@@ -25,7 +25,8 @@ export class CarsService {
     };
 
     findOneById( id:number ){
-        return this.cars[id] ?? [];
+        const car = this.cars.find( car => car.id === id );
+        return car ?? {};
     }
 
 };
